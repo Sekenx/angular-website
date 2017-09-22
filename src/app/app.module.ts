@@ -8,6 +8,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {RouterModule, Routes } from '@angular/router';
+import { UserService } from './user.service'
 
 const appRoutes:Routes = [
   {
@@ -33,7 +34,7 @@ const appRoutes:Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
